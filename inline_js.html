@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><textarea onfocus="this.style.backgroundColor='yellow'"></textarea></div>
+    <p><input type="text" onblur="this.value = this.value.toUpperCase()">
+        <select onchange="this.style.color = this.value">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="blue">blue</option>
+            <option value="blueviolet">blueviolet</option>
+            <option value="burlywood">burlywood</option>
+            <option value="bisque">bisque</option>
+        </select>
+    </p>
+    <p onclick="this.style.fontSize = 'xx-large'" ondblclick="this.style.fontSize = 'medium'">haahaha</p>
+    <div><img src="kometa-scaled2.jpg" alt="kometka" oncontextmenu="alert(this.src)"></div>
+    <div><input type="text" onkeyup="document.getElementById('paragraf').innerText=this.value"><p id="paragraf"></p></div>
+    <h1 style="color:green" onmouseout="this.style.textShadow='2px 2px 5px green'";
+    onmouseover="this.style.textShadow='none'";
+    >Dowolny element</h1>
+</body>
+</html>
