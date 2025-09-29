@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input checked name="akapit" type="radio" id="pokaz"><label for="pokaz">Pokaz akapit</label>
+    <input name="akapit" type="radio" id="ukryj"><label for="ukryj">Ukryj akapit</label>
+    <p id="akapit" style="background-color: yellow; border:solid 2px violet;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, cupiditate molestiae nisi fuga nemo itaque! Commodi, totam corrupti. Vel fugiat voluptate praesentium maxime corrupti, maiores illo itaque rem. Explicabo voluptate minus vitae ex doloribus pariatur quos obcaecati quidem, laboriosam incidunt illum. Eius, sit quibusdam et dolorum vitae ut laborum odio dolores qui eos reiciendis aperiam eveniet eligendi! Nisi expedita ratione cumque magni. Recusandae, veniam. Ullam omnis officiis quia cupiditate, quos necessitatibus laudantium sunt, asperiores animi voluptatum minima, ipsum totam blanditiis libero? Autem minima, odit earum consequuntur soluta dolore ipsum nobis, possimus veniam dolorum hic id qui quod voluptatum quos aut!</p>
+    <script>
+        paragraf = document.getElementById("akapit");
+        input_pokaz = document.getElementById("pokaz");
+input_pokaz.addEventListener("change", function() {
+     paragraf.style.display="block";
+});
+        input_ukryj = document.getElementById("ukryj");
+input_ukryj.addEventListener("change", function() {
+     paragraf.style.display="none";
+});
+    
+    </script>
+</body>
+</html>
