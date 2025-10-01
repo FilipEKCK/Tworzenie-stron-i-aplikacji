@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+        td{
+          padding:10px;
+        }
+        tr.pink{
+            background-color: lightcoral;
+        }
+        div{
+            text-align: center;
+            border: solid 1px lightcoral;
+            margin:30px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+         <img src="nieswieci2.png" alt="zarufka">
+        <table>
+            <tr class="pink">
+                <td><input type="button" value="Włącz" id="swl"></td>
+                <td><input type="button" value="Wyłącz" id="swyl"></td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="status" id="wl"><label for="wl">Włączona</label></td>
+                <td><input type="radio" name="status" id="wyl"><label for="wyl">Wyłączona</label></td>
+            </tr>
+            <tr  class="pink">
+                <td colspan="2"><input type="checkbox" name="" id="wlwyl"><label for="wlwyl" id="label">Wyłączona</label></td>
+                
+            </tr>
+        </table>
+    </div>
+    <script src="zarowka.js"></script>
+</body>
+</html>
