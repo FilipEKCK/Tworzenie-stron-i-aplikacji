@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-family: open sans;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Zmień formatowanie tego tekstu</p>
+    <p>Krój czcionki <select name="czcionka" id="czcionka">
+        <option value="Arial">Arial</option>
+        <option value="Courier">Courier</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Open Sans">Open Sans</option>
+        <option value="Times new Roman">Times new Roman</option>
+    </select>
+    <label for="pogrub">|Pogrubienie</label><input type="checkbox" name="pogrub" id="pogrub">
+    <label for="pochyl">|Pochylenie</label><input type="checkbox" name="pochyl" id="pochyl">
+    <label for="podkresl">|Podkreślenie</label><input type="checkbox" name="podkresl" id="podkresl">
+    <label for="przekresl">|Przekreślenie</label><input type="checkbox" name="przekresl" id="przekresl">
+</p>
+<script>
+    const text = document.getElementById("text");
+    const grub = document.getElementById("pogrub");
+    const chyl = document.getElementById("pochyl");
+    const kresl = document.getElementById("podkresl");
+    const przekresl = document.getElementById("przekresl")
+    const czcionka = document.getElementById("czcionka")
+    
+
+    grub.addEventListener("change", function(){
+        if(grub.checked){
+            text.style.fontWeight= "bold";
+        } else {
+            text.style.fontWeight= "normal";
+        }
+    })
+    chyl.addEventListener("change", function(){
+        if(chyl.checked){
+            text.style.fontStyle= "italic";
+        } else {
+            text.style.fontStyle= "normal";
+        }
+    })
+    kresl.addEventListener("change", function(){
+        if(kresl.checked){
+            if(przekresl.checked){
+            text.style.textDecoration= "line-through underline";} else { text.style.textDecoration="underline" }
+        } else {
+            if(przekresl.checked){
+                text.style.textDecoration="line-through";
+            } else { text.style.textDecoration= "none"; }
+            
+        }
+    })
+    przekresl.addEventListener("change", function(){
+        if(przekresl.checked){
+            if(kresl.checked){
+            text.style.textDecoration= "line-through underline";} else { text.style.textDecoration="line-through" }
+        } else {
+            if(kresl.checked){
+                text.style.textDecoration="underline";
+            } else { text.style.textDecoration= "none"; }
+            
+        }
+    })
+czcionka.addEventListener("change", function(){
+    valu = czcionka.value;
+     text.style.fontFamily=valu;
+})
+</script>
+</body>
+</html>
