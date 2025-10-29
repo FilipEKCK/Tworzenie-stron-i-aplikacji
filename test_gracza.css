@@ -1,0 +1,25 @@
+body{
+    background-color: lightblue;
+    color:midnightblue;
+    font-family: "Calibri";
+    font-size:18px;
+    margin: 50px 100px;
+}
+ol{
+    background-color: aliceblue;
+    border: solid 1px royalblue;
+    padding: 5px 5px 5px 40px;
+}
+li{
+    border:dotted 1px cadetblue;
+    margin-left:-15px;
+    padding:20px 5px;
+}
+a{
+    color:dodgerblue;
+    margin:0px 5px;
+    text-decoration: none;
+}
+a:hover{
+    cursor:pointer;
+}
